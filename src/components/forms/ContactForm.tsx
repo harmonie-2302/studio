@@ -1,7 +1,8 @@
 // src/components/forms/ContactForm.tsx
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState, useEffect } from "react";
+import { useFormStatus } from "react-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -17,10 +18,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea"; // For address if it becomes multiline
+import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { CheckCircleIcon, Loader2, XCircleIcon } from "lucide-react";
-import { useEffect } from "react";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Le nom complet doit contenir au moins 2 caractères."),
@@ -53,7 +53,7 @@ function SubmitButton() {
 
 
 export default function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState);
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(formSchema),
