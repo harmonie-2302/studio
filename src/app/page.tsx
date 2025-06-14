@@ -2,7 +2,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { SewingPinIcon, SparklesIcon, ArrowRightIcon } from 'lucide-react';
+import { SparklesIcon, ArrowRightIcon } from 'lucide-react';
+
+// Custom Sewing Pin Icon SVG
+const SewingPinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+    <path d="M15.5 7.5L9 14" />
+    <path d="M14 9l-1.5 1.5" />
+    <circle cx="6.5" cy="17.5" r="1.5" />
+  </svg>
+);
 
 export default function HomePage() {
   return (
