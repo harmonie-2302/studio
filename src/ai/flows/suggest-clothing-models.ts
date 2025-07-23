@@ -43,7 +43,7 @@ const suggestionPrompt = ai.definePrompt({
     input: { schema: z.object({ idea: z.string() }) },
     // NOTE: We removed the output schema because the image generation model doesn't support JSON output mode.
     // We will process the raw text and media from the response instead.
-    prompt: `Based on the user's request for "{{idea}}", generate one (1) chic and elegant clothing model suggestion. The design should primarily feature "pagne" (African wax print fabric) or other high-quality textiles. Provide a compelling description and generate a representative image for this single suggestion.`,
+    prompt: `En vous basant sur la demande de l'utilisateur pour "{{idea}}", générez une (1) suggestion de modèle de vêtement chic et élégant en FRANÇAIS. Le design doit principalement comporter du "pagne" (tissu wax africain) ou d'autres textiles de haute qualité. Fournissez une description convaincante en FRANÇAIS et générez une image représentative pour cette unique suggestion.`,
     model: 'googleai/gemini-2.0-flash-preview-image-generation',
     config: {
         responseModalities: ['TEXT', 'IMAGE'],
