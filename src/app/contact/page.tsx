@@ -1,4 +1,4 @@
-import ContactForm from '@/components/forms/ContactForm';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react';
 
@@ -8,22 +8,12 @@ export default function ContactPage() {
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-headline text-primary mb-4">Contactez-Nous</h1>
         <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto font-body">
-          Nous sommes ravis de discuter de vos projets de couture. Remplissez le formulaire ci-dessous ou contactez-nous directement.
+          Nous sommes ravis de discuter de vos projets de couture. Voici comment nous joindre.
         </p>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-12 items-start">
-        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <CardHeader>
-            <CardTitle className="text-3xl font-headline text-primary">Vos Coordonnées</CardTitle>
-            <CardDescription className="font-body text-md">Laissez-nous vos informations et nous vous recontacterons dans les plus brefs délais.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ContactForm />
-          </CardContent>
-        </Card>
-
-        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-secondary/30">
+      <section className="flex justify-center">
+        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-secondary/30 w-full max-w-2xl">
           <CardHeader>
             <CardTitle className="text-3xl font-headline text-primary">Informations de l'Atelier</CardTitle>
              <CardDescription className="font-body text-md">Retrouvez-nous ou contactez-nous par d'autres moyens.</CardDescription>
