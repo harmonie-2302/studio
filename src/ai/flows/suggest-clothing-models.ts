@@ -23,6 +23,7 @@ const SuggestionSchema = z.object({
     description: z.string().describe("A chic and elegant description of a clothing model, primarily using 'pagne' (wax print fabric) or other fine textiles."),
     imageDataUri: z.string().describe("A data URI of a generated image for the clothing model. Expected format: 'data:image/png;base64,<encoded_data>'."),
 });
+export type Suggestion = z.infer<typeof SuggestionSchema>;
 
 const SuggestClothingModelsOutputSchema = z.object({
   suggestions: z
@@ -40,7 +41,8 @@ export async function suggestClothingModels(
 const suggestionPrompt = ai.definePrompt({
     name: 'suggestionPrompt',
     input: { schema: z.object({ idea: z.string() }) },
-    output: { schema: SuggestionSchema },
+    // NOTE: We removed the output schema because the image generation model doesn't support JSON output mode.
+    // We will process the raw text and media from the response instead.
     prompt: `Based on the user's request for "{{idea}}", generate one (1) chic and elegant clothing model suggestion. The design should primarily feature "pagne" (African wax print fabric) or other high-quality textiles. Provide a compelling description and generate a representative image for this single suggestion.`,
     model: 'googleai/gemini-2.0-flash-preview-image-generation',
     config: {
@@ -57,20 +59,22 @@ const suggestClothingModelsFlow = ai.defineFlow(
   },
   async (input) => {
     // Generate 3 suggestions in parallel
-    const suggestionPromises = Array(3).fill(null).map(async () => {
-        const { output } = await suggestionPrompt({ idea: input.description });
-        if (!output) throw new Error("Failed to generate a suggestion.");
+    const suggestionPromises = Array(3).fill(null).map(async (): Promise<Suggestion> => {
+        const response = await suggestionPrompt({ idea: input.description });
+        
+        const textPart = response.text;
+        const imagePart = response.media;
 
-        const textPart = output.description;
-        const imagePart = output.imageDataUri;
-
+        if (!textPart) {
+          throw new Error("Text generation failed for a suggestion.");
+        }
         if (!imagePart) {
             throw new Error('Image generation failed for a suggestion.');
         }
 
         return {
             description: textPart,
-            imageDataUri: imagePart,
+            imageDataUri: imagePart.url,
         };
     });
 
