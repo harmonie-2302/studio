@@ -42,8 +42,8 @@ const suggestionPrompt = ai.definePrompt({
     input: { schema: z.object({ idea: z.string() }) },
     output: { schema: SuggestionSchema },
     prompt: `Based on the user's request for "{{idea}}", generate one (1) chic and elegant clothing model suggestion. The design should primarily feature "pagne" (African wax print fabric) or other high-quality textiles. Provide a compelling description and generate a representative image for this single suggestion.`,
+    model: 'googleai/gemini-2.0-flash-preview-image-generation',
     config: {
-        model: 'googleai/gemini-2.0-flash-preview-image-generation',
         responseModalities: ['TEXT', 'IMAGE'],
     },
 });
