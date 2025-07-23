@@ -1,3 +1,4 @@
+
 import ServiceCard from '@/components/ui/ServiceCard';
 import { ScissorsIcon, PaletteIcon, ShirtIcon, ZapIcon } from 'lucide-react';
 
