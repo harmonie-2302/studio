@@ -97,7 +97,7 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel className="text-lg font-headline text-primary">Nom et Prénom</FormLabel>
                 <FormControl>
-                  <Input placeholder="Ex: Sophie Dubois" {...field} className="text-base"/>
+                  <Input placeholder="Ex: Harmonie Nankafu" {...field} className="text-base"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -110,7 +110,7 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel className="text-lg font-headline text-primary">Adresse</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Ex: 123 Rue de la Couture, Paris" {...field} className="text-base min-h-[100px]" />
+                  <Textarea placeholder="Ex: AV. P.E LUMUMBA" {...field} className="text-base min-h-[100px]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -123,7 +123,7 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel className="text-lg font-headline text-primary">Numéro de Téléphone</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="Ex: 06 12 34 56 78" {...field} className="text-base"/>
+                  <Input type="tel" placeholder="Ex: +243 854832846" {...field} className="text-base"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>

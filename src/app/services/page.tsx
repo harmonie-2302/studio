@@ -5,7 +5,7 @@ const services = [
   {
     title: 'Robes sur Mesure',
     description: 'Création de robes uniques pour toutes occasions, de la conception à la réalisation finale. Mariages, soirées, cocktails.',
-    imageUrl: 'https://placehold.co/400x500.png',
+    imageUrl: 'src=',
     imageHint: 'custom dress',
     Icon: ShirtIcon,
   },
