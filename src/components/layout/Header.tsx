@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { HomeIcon, ShoppingBagIcon, SparklesIcon, MailIcon, MenuIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetDescription } from '@/components/ui/sheet';
 import { useState } from 'react';
 
 // Custom Sewing Pin Icon SVG
@@ -66,16 +66,21 @@ export default function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-accent">
                 <MenuIcon className="h-6 w-6" />
+                <span className="sr-only">Ouvrir le menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[250px] bg-primary text-primary-foreground p-0">
-              <div className="p-6">
-                <Link href="/" className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
-                    <SewingPinIcon className="h-7 w-7 text-accent" />
-                    <h2 className="text-xl font-headline tracking-wider">
-                    Harmy's Atelier
-                    </h2>
-                </Link>
+              <SheetHeader className="p-6 pb-0">
+                  <SheetTitle className="sr-only">Menu Principal</SheetTitle>
+                  <SheetDescription className="sr-only">Navigation principale du site</SheetDescription>
+                  <Link href="/" className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
+                      <SewingPinIcon className="h-7 w-7 text-accent" />
+                      <h2 className="text-xl font-headline tracking-wider">
+                      Harmy's Atelier
+                      </h2>
+                  </Link>
+              </SheetHeader>
+              <div className="p-6 pt-0">
                 <nav className="flex flex-col space-y-3">
                 {navItems.map((item) => (
                     <Button 
