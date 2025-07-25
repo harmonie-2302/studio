@@ -13,7 +13,7 @@ const services = [
   {
     title: 'Retouches & Réparations',
     description: 'Ajustements parfaits pour vos vêtements préférés. Ourlets, reprises, modifications et réparations de qualité.',
-    imageUrl: 'https://placehold.co/400x500.png',
+    imageUrl: '/images/proper-tailoring.jpg',
     imageHint: 'clothing alterations',
     Icon: ScissorsIcon,
   },
