@@ -30,7 +30,7 @@ export default function ContactPage() {
               <PhoneIcon className="h-7 w-7 text-primary mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-primary">Téléphone</h3>
-                <p className="text-foreground/80 font-body">+33 1 23 45 67 89</p>
+                <p className="text-foreground/80 font-body">+243854832846</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
