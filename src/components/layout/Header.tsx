@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { HomeIcon, ShoppingBagIcon, SparklesIcon, MailIcon, MenuIcon } from 'lucide-react';
+import { HomeIcon, ShoppingBagIcon, SparklesIcon, MailIcon, MenuIcon, UserIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
@@ -31,6 +31,7 @@ const SewingPinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const navItems = [
   { href: '/', label: 'Accueil', icon: <HomeIcon className="h-5 w-5" /> },
   { href: '/services', label: 'Services', icon: <ShoppingBagIcon className="h-5 w-5" /> },
+  { href: '/about', label: 'À Propos', icon: <UserIcon className="h-5 w-5" /> },
   { href: '/ai-designer', label: 'AI Créateur', icon: <SparklesIcon className="h-5 w-5" /> },
   { href: '/contact', label: 'Contact', icon: <MailIcon className="h-5 w-5" /> },
 ];
