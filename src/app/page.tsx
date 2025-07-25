@@ -91,7 +91,7 @@ export default function HomePage() {
 
       {/* Why Choose Us Section */}
       <section className="py-12 bg-secondary/30 rounded-lg">
-        <h2 className="text-3xl md:text-4xl font-headline text-primary text-center mb-10">Pourquoi Choisir Harmy's Atelier ?</h2>
+        <h2 className="text-3xl md:text-4xl font-headline text-primary text-center mb-10">Pourquoi Choisir Harmy'sewing ?</h2>
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div className="p-6">
             <SewingPinIcon className="h-12 w-12 text-primary mx-auto mb-4" />

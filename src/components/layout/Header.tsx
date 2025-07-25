@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { HomeIcon, ShoppingBagIcon, SparklesIcon, MailIcon, MenuIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetDescription } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
 
 // Custom Sewing Pin Icon SVG
@@ -44,7 +44,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 group">
           <SewingPinIcon className="h-8 w-8 text-accent group-hover:animate-pulse" />
           <h1 className="text-2xl font-headline tracking-wider group-hover:text-accent transition-colors">
-            Harmy's Atelier
+            Harmy'sewing
           </h1>
         </Link>
         
@@ -76,7 +76,7 @@ export default function Header() {
                   <Link href="/" className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
                       <SewingPinIcon className="h-7 w-7 text-accent" />
                       <h2 className="text-xl font-headline tracking-wider">
-                      Harmy's Atelier
+                      Harmy'sewing
                       </h2>
                   </Link>
               </SheetHeader>

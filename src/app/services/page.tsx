@@ -1,4 +1,3 @@
-
 import ServiceCard from '@/components/ui/ServiceCard';
 import { ScissorsIcon, PaletteIcon, ShirtIcon, ZapIcon } from 'lucide-react';
 
@@ -15,7 +14,6 @@ const services = [
     description: 'Ajustements parfaits pour vos vêtements préférés. Ourlets, reprises, modifications et réparations de qualité.',
     imageUrl: '/images/proper-tailoring.jpg',
     imageHint: 'clothing alterations',
-    Icon: ScissorsIcon,
   },
   {
     title: 'Créations Uniques',
@@ -66,7 +64,7 @@ export default function ServicesPage() {
               description={service.description}
               imageUrl={service.imageUrl}
               imageHint={service.imageHint}
-              Icon={service.title === 'Retouches & Réparations' ? undefined : service.Icon}
+              Icon={service.Icon}
             />
           ))}
         </div>

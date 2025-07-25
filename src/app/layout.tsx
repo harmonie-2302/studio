@@ -5,7 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: "Harmy's Atelier",
+  title: "Harmy'sewing",
   description: "Atelier de couture Harmy'sewing - Créations sur mesure et services de couture.",
 };
 
