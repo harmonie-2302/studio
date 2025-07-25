@@ -66,7 +66,7 @@ export default function ServicesPage() {
               description={service.description}
               imageUrl={service.imageUrl}
               imageHint={service.imageHint}
-              Icon={service.Icon}
+              Icon={service.title === 'Retouches & Réparations' ? undefined : service.Icon}
             />
           ))}
         </div>
