@@ -23,7 +23,7 @@ export default function ContactPage() {
               <MapPinIcon className="h-7 w-7 text-primary mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-primary">Adresse</h3>
-                <p className="text-foreground/80 font-body">123 Rue de la Mode, 75001 Paris, France</p>
+                <p className="text-foreground/80 font-body">Av Hypodrome en face de HDW</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -37,7 +37,7 @@ export default function ContactPage() {
               <MailIcon className="h-7 w-7 text-primary mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-primary">Email</h3>
-                <p className="text-foreground/80 font-body">contact@harmysewing.com</p>
+                <p className="text-foreground/80 font-body">nankafuharmonie@gmail.com</p>
               </div>
             </div>
             <div>
