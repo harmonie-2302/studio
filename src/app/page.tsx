@@ -3,27 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SparklesIcon, ArrowRightIcon } from 'lucide-react';
-
-// Custom Sewing Pin Icon SVG
-const SewingPinIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-    <path d="M15.5 7.5L9 14" />
-    <path d="M14 9l-1.5 1.5" />
-    <circle cx="6.5" cy="17.5" r="1.5" />
-  </svg>
-);
+import { HarmySewingIcon } from '@/components/icons/HarmySewingIcon';
 
 export default function HomePage() {
   return (
@@ -31,7 +11,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative text-center py-16 md:py-24 rounded-lg overflow-hidden shadow-xl bg-gradient-to-br from-primary to-accent">
         <div className="relative z-10 container mx-auto px-4">
-          <SewingPinIcon className="h-16 w-16 text-primary-foreground mx-auto mb-6 animate-bounce" />
+          <HarmySewingIcon className="h-24 w-24 text-primary-foreground mx-auto mb-6" />
           <h1 className="text-5xl md:text-6xl font-headline text-primary-foreground mb-4">
             Bienvenue à l'Atelier Harmy'sewing
           </h1>
@@ -84,7 +64,7 @@ export default function HomePage() {
         <h2 className="text-3xl md:text-4xl font-headline text-primary text-center mb-10">Pourquoi Choisir Harmy'sewing ?</h2>
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div className="p-6">
-            <SewingPinIcon className="h-12 w-12 text-primary mx-auto mb-4" />
+            <HarmySewingIcon className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-headline text-primary mb-2">Savoir-Faire Artisanal</h3>
             <p className="text-foreground/70 font-body">Des années d'expérience et une passion pour la couture de haute qualité.</p>
           </div>

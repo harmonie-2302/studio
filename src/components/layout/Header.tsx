@@ -6,27 +6,7 @@ import { HomeIcon, ShoppingBagIcon, SparklesIcon, MailIcon, MenuIcon, UserIcon }
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetDescription } from '@/components/ui/sheet';
 import { useState } from 'react';
-
-// Custom Sewing Pin Icon SVG
-const SewingPinIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-    <path d="M15.5 7.5L9 14" />
-    <path d="M14 9l-1.5 1.5" />
-    <circle cx="6.5" cy="17.5" r="1.5" />
-  </svg>
-);
+import { HarmySewingIcon } from '../icons/HarmySewingIcon';
 
 const navItems = [
   { href: '/', label: 'Accueil', icon: <HomeIcon className="h-5 w-5" /> },
@@ -43,7 +23,7 @@ export default function Header() {
     <header className="bg-primary text-primary-foreground shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <SewingPinIcon className="h-8 w-8 text-accent group-hover:animate-pulse" />
+          <HarmySewingIcon className="h-10 w-10 text-accent group-hover:animate-pulse" />
           <h1 className="text-2xl font-headline tracking-wider group-hover:text-accent transition-colors">
             Harmy'sewing
           </h1>
@@ -75,7 +55,7 @@ export default function Header() {
                   <SheetTitle className="sr-only">Menu Principal</SheetTitle>
                   <SheetDescription className="sr-only">Navigation principale du site</SheetDescription>
                   <Link href="/" className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
-                      <SewingPinIcon className="h-7 w-7 text-accent" />
+                      <HarmySewingIcon className="h-10 w-10 text-accent" />
                       <h2 className="text-xl font-headline tracking-wider">
                       Harmy'sewing
                       </h2>
