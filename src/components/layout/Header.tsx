@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { HomeIcon, ShoppingBagIcon, SparklesIcon, MailIcon, MenuIcon, UserIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetDescription } from '@/components/ui/sheet';
 import { useState } from 'react';
 
 // Custom Sewing Pin Icon SVG
