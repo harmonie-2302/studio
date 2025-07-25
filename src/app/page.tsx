@@ -30,16 +30,6 @@ export default function HomePage() {
     <div className="space-y-12">
       {/* Hero Section */}
       <section className="relative text-center py-16 md:py-24 rounded-lg overflow-hidden shadow-xl bg-gradient-to-br from-primary to-accent">
-        <div className="absolute inset-0 opacity-20">
-           <Image 
-            src="https://placehold.co/1200x600.png" 
-            alt="Atelier de couture Harmy'sewing" 
-            layout="fill"
-            objectFit="cover"
-            data-ai-hint="fashion workshop"
-            className="animate-pulse"
-          />
-        </div>
         <div className="relative z-10 container mx-auto px-4">
           <SewingPinIcon className="h-16 w-16 text-primary-foreground mx-auto mb-6 animate-bounce" />
           <h1 className="text-5xl md:text-6xl font-headline text-primary-foreground mb-4">
