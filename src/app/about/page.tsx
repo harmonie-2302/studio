@@ -20,7 +20,6 @@ export default function AboutPage() {
                 alt="Madame Zawadi Bashizi"
                 fill
                 style={{ objectFit: 'cover' }}
-                className="w-full h-full"
               />
             </div>
             <CardTitle className="text-3xl font-headline text-primary">Zawadi Bashizi</CardTitle>
