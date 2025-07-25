@@ -15,13 +15,12 @@ export default function AboutPage() {
       <section className="flex justify-center">
         <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-secondary/30 w-full max-w-2xl overflow-hidden">
           <CardHeader className="text-center p-6">
-            <div className="w-48 h-48 rounded-full mx-auto mb-6 overflow-hidden border-4 border-primary shadow-lg">
+            <div className="relative w-48 h-48 rounded-full mx-auto mb-6 overflow-hidden border-4 border-primary shadow-lg">
               <Image
                 src="/images/zawadi-bashizi.jpg"
                 alt="Madame Zawadi Bashizi"
-                width={192}
-                height={192}
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
                 className="w-full h-full"
               />
             </div>
