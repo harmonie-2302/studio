@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { SewingPinIcon } from 'lucide-react';
 
 export default function AboutPage() {
   return (
