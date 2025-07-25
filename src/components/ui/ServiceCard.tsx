@@ -19,8 +19,8 @@ export default function ServiceCard({ title, description, imageUrl, imageHint, I
           <Image
             src={imageUrl}
             alt={title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className="transition-transform duration-500 group-hover:scale-110"
             data-ai-hint={imageHint}
           />
