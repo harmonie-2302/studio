@@ -105,8 +105,8 @@ export default function ModelSuggester() {
                         <Image
                             src={suggestion.imageDataUri}
                             alt={`Suggestion de vêtement ${index + 1}`}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            className="object-cover object-top"
                         />
                     </div>
                   )}
