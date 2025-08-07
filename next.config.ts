@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  serverActions: {
+    bodySizeLimit: '4.5mb', // Default is 1mb
+    // Extend the timeout for all server actions
+    // By default, the timeout is 60 seconds
+    executionTimeout: 120, // 2 minutes
+  },
 };
 
 export default nextConfig;
