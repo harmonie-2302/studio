@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
     ],
   },
   serverActions: {
-    bodySizeLimit: '1mb', // Default is 1mb
+    bodySizeLimit: '4.5mb', // Increase for AI image generation
     // Extend the timeout for all server actions
     // By default, the timeout is 60 seconds
     executionTimeout: 120, // 2 minutes
